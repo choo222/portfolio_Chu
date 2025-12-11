@@ -1,0 +1,121 @@
+/* nav-bar_____________________________________________ */
+.nav-bar{
+  background: var(--light-gray);
+  box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.25);
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 50rem;
+  height: 4rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+#gnb{display: flex;}
+#gnb li{margin-left: 1rem;}
+#gnb li a{
+  display: block;
+  width: 8rem;
+  height: 3rem;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 3rem;
+  border-radius: 1.5rem;
+}
+a.nav:hover{color: var(--primary);}
+a.nav.active{
+  color: var(--primary);
+  background: var(--white);
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.25) inset;
+}
+
+.info-btn{
+  color: var(--medium-gray);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info-btn:hover{color: var(--dark-gray);cursor: pointer;}
+.home-btn a{
+  color: var(--dark-gray);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* 공통____________________________________________________ */
+.container{
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+}
+section{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #FAFAFA 36.41%, #E5E5E5 84.2%);
+}
+.line{
+  width: 100%;
+  height: 0.1rem;
+  background-color: rgba(17, 17, 17,0.3);
+}
+
+/* header_________________________________________________ */
+.header{
+  position: absolute;
+  top: 1.5rem;
+  width: 100%;
+  padding: 0 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-tit{
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0 3rem;
+}
+.header-btn{
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 1rem;
+}
+
+
+/* Home_________________________________________ */
+.main{
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.main-tit, .main-word{white-space: nowrap;}
+.main-tit{margin: 0 3rem;}
+.main-tit span{
+  color: var(--primary);
+  font-weight: 500;
+}
+.main-word{
+  color: var(--primary);
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 2rem;
+}
