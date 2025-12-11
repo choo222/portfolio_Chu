@@ -1,0 +1,4 @@
+@keyframes Bounce {
+  0%, 100% {transform: translateY(-50%)}
+  50% {transform: translateY(calc(-50% - 1rem))}
+}

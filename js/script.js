@@ -57,7 +57,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
+// intro
+$(function () {
+  $(".intro").on("click", function () {
+    $(".intro.left").css("left", "-100%");
+    $(".intro.right").css("right", "-100%");
+    $("#home").css("transform","scale(1)")
+  });
+});
 
 
 // nav active클래스
@@ -65,5 +72,31 @@ $(function () {
   $('.nav-bar .nav').on('click', function () {
     $('.nav-bar .nav').removeClass('active');
     $(this).addClass('active');
+  });
+});
+//info-box hover
+$(function(){
+  $('.info-btn').hover(function(){
+    $(this).next().css("opacity", "1");
+  },function(){
+    $(this).next().css("opacity", "0");
+  });
+});
+
+// design
+$(function () {
+  const designInner = $(".design-inner");
+
+  $(".uxui-btn").on("click", function () {
+    designInner.css("left", "0");
+  });
+  
+  $(".nav-design").on("click", function () {
+    designInner.css("left", "-100%");
+  });
+
+
+  $(".graphic-btn").on("click", function () {
+    designInner.css("left", "-200%");
   });
 });

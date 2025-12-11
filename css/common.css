@@ -16,6 +16,9 @@
 /* Color */
 .primary{color: var(--primary);}
 .primary-bg{background-color: var(--primary);}
+.dark-gray{color: var(--dark-gray);}
+.dark-gray-bg{background-color: var(--dark-gray);}
+.default-color-bg{background-color: var(--default-color);}
 .white{color: var(--white);}
 .white-bg{background-color: var(--white);}
 
