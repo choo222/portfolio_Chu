@@ -1,0 +1,125 @@
+.publishing-sec, .uxui-sec{ /* change */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1rem;
+  color: #111;
+  margin: 0;
+  padding: 0;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 1rem;
+  background: var(--primary-gra);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+.swiper-button-next, .swiper-button-prev{
+  color: var(--dark-gray);
+  transform: scaleX(0.8) scaleY(2);
+}
+.swiper-pagination-bullet-active{background-color: var(--primary);}
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{bottom: 6rem;}
+
+/* add */
+/* swiper-content */
+.swiper-contents{
+  position: relative;
+  width: clamp(75rem, 73%, 87.5rem);
+  height: 80%;
+  padding: 1rem;
+}
+.swiper-content{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+}
+.swiper-tit{
+  display: flex;
+  align-items: end;
+}
+.swiper-tit p:nth-of-type(1){
+  margin: 0 2rem;
+  font-size: 1.5rem;
+}
+.swiper-txt{padding-top: 0.5rem;}
+.swiper-txt li span{
+  font-family: "Noto Sans KR", sans-serif;
+  margin-right: 1.5rem;
+}
+.swiper-txt li:not(:last-child){margin-bottom: 0.75rem;}
+
+/* swiper-project */
+.swiper-project{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1rem;
+  /* padding: 1rem 2rem;
+  border-radius: 2rem;
+  box-shadow: var(--shadow-default) inset; */
+  animation: Updown 1.5s ease-in-out infinite;  
+}
+
+
+/* link-btns */
+.swiper-contents .link-btns{
+  position: absolute;
+  bottom: 2rem;
+  right: 1rem;
+}
+
+/* gotoweb */
+.link-btn.gotoweb{
+  color: var(--white);
+  background-color: var(--primary);
+  overflow: hidden;
+}
+.gotoweb{transition: 0.35s;}
+.gotoweb a{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0 2.5rem;
+}
+.gotoweb a img{
+  object-fit: contain;
+  width: 0rem;
+  margin-right: 0.75rem;
+  transition: 0.35s;
+}
+.gotoweb a span{
+  overflow: hidden;
+  white-space: nowrap;
+}
+.gotoweb:hover a span{width: 0;}
+.gotoweb:hover a img{width: 4.5rem;}
+
+/* tools */
+.tools{
+  display: flex;
+  gap: 0.75rem;
+}

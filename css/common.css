@@ -4,10 +4,13 @@
   --white: #ffffff;
   --primary: #0800FF;
   --primary-sub: #413BFF;
+  --primary-gra: linear-gradient(135deg, #FAFAFA 36.41%, #E5E5E5 84.2%);
   --secondary: #7B3AEB;
   --light-gray: #FAFAFA;
   --medium-gray: #9F9F9F;
   --dark-gray: #333333;
+  --shadow-center: 0 0 0.5rem 0 rgba(0, 0, 0, 0.25);
+  --shadow-default: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.25);
 }
 
 /* layout */
@@ -32,6 +35,13 @@ body{
 }
 .en1{font-family: "Noto Sans", sans-serif;}
 .en2{font-family: 'Presentation';}
+.bold{font-weight: 700;}
+
+h3{
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 .main-tit{
   font-family: 'Escoredream';
   font-size: 3rem;
@@ -42,4 +52,12 @@ body{
   font-size: 2rem;
   font-weight: 700;
 }
+.tool-icon{width: 2rem !important;height: 2rem;}
 
+/* center */
+.center{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}

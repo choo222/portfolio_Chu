@@ -66,7 +66,6 @@ $(function () {
   });
 });
 
-
 // nav active클래스
 $(function () {
   $('.nav-bar .nav').on('click', function () {
@@ -74,29 +73,72 @@ $(function () {
     $(this).addClass('active');
   });
 });
+
 //info-box hover
 $(function(){
   $('.info-btn').hover(function(){
-    $(this).next().css("opacity", "1");
+    $(this).next().fadeIn();
   },function(){
-    $(this).next().css("opacity", "0");
+    $(this).next().fadeOut();
   });
+});
+
+// process 버튼
+document.querySelectorAll(".icons-btn").forEach((btn) => {
+  const text = btn.querySelector(".icons-btn-txt");
+  const icons = btn.querySelectorAll(".icon-btn");
+
+  const tl = gsap.timeline({ paused: true });
+
+  tl.to(text, {
+    y: -16,
+    opacity: 0,
+    duration: 0.25,
+    ease: "power2.out"
+  })
+  .to(icons, {
+    y: 0,
+    opacity: 1,
+    duration: 0.35,
+    stagger: 0.1,
+    ease: "power2.out"
+  }, "-=0.1");
+
+  btn.addEventListener("mouseenter", () => tl.play());
+  btn.addEventListener("mouseleave", () => tl.reverse());
 });
 
 // design
 $(function () {
   const designInner = $(".design-inner");
-
+  const nav = document.querySelectorAll(".nav");
+  
   $(".uxui-btn").on("click", function () {
     designInner.css("left", "0");
   });
-  
-  $(".nav-design").on("click", function () {
-    designInner.css("left", "-100%");
-  });
-
-
   $(".graphic-btn").on("click", function () {
     designInner.css("left", "-200%");
   });
+  $(nav).on("click", function () {
+    designInner.css("left", "-100%");
+  });
 });
+
+
+// Contact - thank-btn, modal close-btn
+$(document).ready(function(){
+
+  $(".thank").click(function(){
+    $(".modal").fadeIn();
+  });
+
+  $(".close-btn").click(function(){
+    $(".modal").fadeOut();
+  });
+  $(".modal-bg").click(function(){
+    $(".modal").fadeOut();
+  });
+});
+
+
+
