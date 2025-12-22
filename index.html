@@ -10,27 +10,33 @@
 </head>
 <body>
   
-  <div class="intro left">
+  <!-- <div class="intro left">
   
   </div>
   <div class="intro right">
   
-  </div>
+  </div> -->
 
   <div class="nav-bar en2">
-    <div class="home-btn"><a href="#home" data-idx="0" class="nav active"><i class="fa-solid fa-house"></i></a></div>
+    <div class="home-btn"><a href="#home" data-target="home" class="nav active"><i class="fa-solid fa-house"></i></a></div>
     <ul id="gnb">
-      <li><a href="#about" data-idx="1" class="nav">About</a></li>        
-      <li><a href="#publishing" data-idx="2" class="nav">Publishing</a></li>
-      <li><a href="#design" data-idx="3" class="nav nav-design">Design</a></li>
-      <li><a href="#contact" data-idx="4" class="nav">Contact</a></li>
+      <li><a href="#about" data-target="about" class="nav">About</a></li>        
+      <li><a href="#publishing" data-target="publishing" class="nav">Publishing</a></li>
+      <li><a href="#design" data-target="design" class="nav nav-design">Design</a></li>
+      <li><a href="#contact" data-target="contact" class="nav">Contact</a></li>
     </ul>
     <div class="info-btn"><i class="fa-solid fa-info"></i></div>
     <div class="info-box">본 포트폴리오는<br>1920 X 1080 (100%) 해상도에 최적화 되어 있습니다.</div>
   </div>
 
   <div class="container">
-    <section id="home">
+    <section id="intro" class="page-section">
+      <h1 class="text heading-text en2">
+        WEB PUBLISHER
+      </h1>
+    </section>
+
+    <section id="home" class="page-section">
       <div class="main">
         <div class="main-word creative">창의성</div>
         <div class="line"></div>
@@ -43,7 +49,7 @@
       <div class="bg-txt bg-txt3">ChuSuyeon</div>
     </section>
 
-    <section id="about">
+    <section id="about" class="page-section">
       <div class="header">
         <div class="line"></div>
         <div class="header-tit en2">About</div>
@@ -52,7 +58,7 @@
 
     </section>
 
-    <section id="publishing">
+    <section id="publishing" class="page-section">
       <div class="header">
         <div class="header-btn en2">prev</div>
         <div class="line"></div>
@@ -244,7 +250,7 @@
 
     </section>
 
-    <section id="design">
+    <section id="design" class="page-section">
       <div class="design-inner">
         <div class="uxui design-sec">
           <div class="header">
@@ -285,8 +291,11 @@
                           </a>
                         </div>
                       </div>
-                      <div class="link-btn gotoweb">
-                        <a href="https://choo15.dothome.co.kr/" target="_blank"><img src="images/arrow-right.png" alt="오른쪽화살표">go <span>&nbsp;to web</span></a>
+                      <div class="link-btn proto">
+                        <a href="https://choo15.dothome.co.kr/" target="_blank">
+                          <p>prototyping</p>
+                          <p>figma link<i class="fa-solid fa-arrow-right"></i></p>
+                        </a>
                       </div>
                     </div>
                     <div class="swiper-project">100% Personal Project</div>
@@ -323,8 +332,11 @@
                           </a>
                         </div>
                       </div>
-                      <div class="link-btn gotoweb">
-                        <a href="https://choo15.dothome.co.kr/" target="_blank"><img src="images/arrow-right.png" alt="오른쪽화살표">go <span>&nbsp;to web</span></a>
+                      <div class="link-btn proto">
+                        <a href="https://choo15.dothome.co.kr/" target="_blank">
+                          <p>prototyping</p>
+                          <p>figma link<i class="fa-solid fa-arrow-right"></i></p>
+                        </a>
                       </div>
                     </div>
                     <div class="swiper-project">100% Personal Project</div>
@@ -365,8 +377,11 @@
                           <div class="modal-content center"></div>
                         </div>
                       </div>
-                      <div class="link-btn gotoweb">
-                        <a href="https://choo15.dothome.co.kr/" target="_blank"><img src="images/arrow-right.png" alt="오른쪽화살표">go <span>&nbsp;to web</span></a>
+                      <div class="link-btn proto">
+                        <a href="https://choo15.dothome.co.kr/" target="_blank">
+                          <p>prototyping</p>
+                          <p>figma link<i class="fa-solid fa-arrow-right"></i></p>
+                        </a>
                       </div>
                     </div>
                     <div class="swiper-project">100% Personal Project</div>
@@ -400,8 +415,11 @@
                           </a>
                         </div>
                       </div>
-                      <div class="link-btn gotoweb">
-                        <a href="https://choo15.dothome.co.kr/" target="_blank"><img src="images/arrow-right.png" alt="오른쪽화살표">go <span>&nbsp;to web</span></a>
+                      <div class="link-btn proto">
+                        <a href="https://choo15.dothome.co.kr/" target="_blank">
+                          <p>prototyping</p>
+                          <p>figma link<i class="fa-solid fa-arrow-right"></i></p>
+                        </a>
                       </div>
                     </div>
                     <div class="swiper-project">100% Personal Project</div>
@@ -464,7 +482,7 @@
       </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="page-section">
       <div class="header">
         <div class="line"></div>
         <div class="header-tit en2">Contact</div>
@@ -504,10 +522,10 @@
         </div>
       </div>
 
-      <div class="modal">
+      <div class="modal contact-modal">
         <div class="modal-bg center"></div>
-        <div class="modal-content contact-modal center">
-          <a href="#none" class="close-btn"><i class="fa-solid fa-xmark center"></i></a>
+        <div class="modal-content center">
+          <a href="#none" class="close-btn"><i class="fa-solid fa-xmark"></i></a>
           <div class="final center">
             <div class="final-tit">소중한 시간 내주셔서 감사합니다.</div>
             <div class="final-txt">
@@ -546,13 +564,17 @@
     </section>
   </div>
 
-  <!-- Swiper JS -->
+  <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="https://assets.codepen.io/16327/ScrambleTextPlugin3.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/intro.js"></script>
+  <script src="js/scroll.js"></script>
   <script src="js/swiper.js"></script>
+  <script src="js/script.js"></script>
 
 
 </body>

@@ -35,6 +35,11 @@ section{
   width: clamp(50rem, 70%, 87.5rem);
   z-index: 1;
 }
+.close-btn{
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+}
 
 /* intro_____________________________________________ */
 .intro{
@@ -45,6 +50,7 @@ section{
   background-color: var(--default-color);
   /* background-color: var(--dark-gray); */
   transition: 0.7s ease-in-out;
+  display: none;
 }
 .intro.left{
   left: 0; transform: rotateY(0deg);
@@ -60,7 +66,7 @@ section{
   background: var(--light-gray);
   box-shadow: var(--shadow-center);
   position: fixed;
-  bottom: 1.5rem;
+  bottom: -5rem;
   left: 50%;
   transform: translateX(-50%);
   width: 50rem;
@@ -83,6 +89,7 @@ section{
   text-align: center;
   line-height: 3rem;
   border-radius: 1.5rem;
+  transition: 0.35s;
 }
 a.nav:hover{color: var(--primary);}
 a.nav.active{
@@ -159,7 +166,8 @@ a.nav.active{
 }
 
 /* Home_________________________________________ */
-#home{transform: scale(0.1); transition: 0.7s ease-in-out;}
+/* #home{transform: scale(0.1); transition: 0.7s ease-in-out;} */
+#home{transform: scale(1); transition: 0.7s ease-in-out;}
 .main{
   position: absolute;
   top: 45%;
@@ -197,6 +205,7 @@ a.nav.active{
   font-weight: 100;
   top: 0;
   left: 0;
+  /* transform: translateX(-300px); */
 }
 .bg-txt2{
   color: #E5E5E5;
@@ -388,38 +397,37 @@ a.nav.active{
 
 
 /* contact-modal */
-.contact-modal{
+.contact-modal .modal-content{
   height: 35rem;
   border-radius: 3rem;
   text-align: center;
 }
-.close-btn{
-  position: absolute;
+.contact-modal .close-btn{
   top: 2rem;
   right: 2rem;
-  width: 3rem;
-  height: 3rem;
 }
-.final{
+
+.contact-modal .final{
   white-space: nowrap;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.final-tit{
+.contact-modal .final-tit{
   font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 500;
+  font-weight: 400;
   color: var(--primary);
   margin-bottom: 3rem;
 }
-.final-txt{font-size: clamp(1rem, 1.5vw, 1.5rem);}
-
-.process-btn{
+.contact-modal .final-txt{font-size: clamp(1rem, 1.5vw, 1.5rem);}
+.contact-modal .tools{margin: 1.5rem 0;}
+/* .contact-modal .process-btn{
   font-size: clamp(1rem, 1.5vw, 1.5rem);
   color: var(--dark-gray);
   border: 0.1rem solid var(--dark-gray);
   border-radius: 3rem;
   padding: 0.5rem 1rem;
   margin: 3rem auto 4rem;
-}
+} */
+.contact-modal .icons-btn.process{margin-bottom: 2rem;}
 .copy{font-size: clamp(0.75rem, 1.5vw, 1rem);}

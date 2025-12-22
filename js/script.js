@@ -1,11 +1,17 @@
-// window.addEventListener("load", function () {
-//   history.replaceState(null, "", location.pathname);
-//   window.scrollTo(0, 0);
-// });
+// 해시제거
+window.addEventListener("load", () => {
+  if (location.hash) {
+    history.replaceState(null, "", location.pathname);
+  }
+});
 
-// 
+window.addEventListener("load", function () {
+  history.replaceState(null, "", location.pathname);
+  window.scrollTo(0, 0);
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
-  const navLinks = document.querySelectorAll('.nav-bar .nav');
   const html = document.documentElement;
 
   // 1) 브라우저의 자동 스크롤 복원 방지 (리로드 시 위치 복원 차단)
@@ -23,59 +29,46 @@ document.addEventListener("DOMContentLoaded", function () {
     html.style.scrollBehavior = "smooth";
   }, 50);
 
-  // 3) 새로고침 시 항상 처음 화면으로 돌아가게 하려면 해시 제거
-  window.addEventListener("beforeunload", function () {
-    // 주소창에서 해시 제거 (이러면 새로고침 후 URL에 해시가 남지 않음)
-    try {
-      history.replaceState(null, "", location.pathname + location.search);
-    } catch (e) {
-      // 일부 환경에서는 실패할 수 있으나 무시해도 됨
-    }
-  });
-
-  // 4) 네비게이션 클릭: active 토글 + 스무스 스크롤 (명시)
-  navLinks.forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-
-      // active 관리 (info-btn은 .nav가 아니므로 영향 없음)
-      navLinks.forEach(n => n.classList.remove('active'));
-      this.classList.add('active');
-
-      const targetHash = this.getAttribute('href');
-      const targetEl = document.querySelector(targetHash);
-
-      if (targetEl) {
-        // 클릭할 때는 명시적으로 부드럽게 스크롤
-        targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-
-      // URL 해시를 히스토리에 남기되 강제 이동을 막기 위해 replaceState 사용
-      history.replaceState(null, "", targetHash);
-    });
-  });
 });
 
 
 // intro
-$(function () {
-  $(".intro").on("click", function () {
-    $(".intro.left").css("left", "-100%");
-    $(".intro.right").css("right", "-100%");
-    $("#home").css("transform","scale(1)")
-  });
-});
+// $(function () {
+//   $(".intro").on("click", function () {
+//     $(".intro.left").css("left", "-100%");
+//     $(".intro.right").css("right", "-100%");
+//     $("#home").css("transform","scale(1)")
+//   });
+// });
 
-// nav active클래스
-$(function () {
-  $('.nav-bar .nav').on('click', function () {
-    $('.nav-bar .nav').removeClass('active');
-    $(this).addClass('active');
+// nav-bar
+const sections = document.querySelectorAll(".page-section");
+const gnbLinks = document.querySelectorAll(".nav");
+
+const observerOptions = {
+  root: null,
+  threshold: 0.6
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+
+    const currentId = entry.target.id;
+
+    gnbLinks.forEach(link => {
+      link.classList.toggle(
+        "active",
+        link.dataset.target === currentId
+      );
+    });
   });
-});
+}, observerOptions);
+
+sections.forEach(section => observer.observe(section));
 
 //info-box hover
-$(function(){
+$(document).ready(function(){
   $('.info-btn').hover(function(){
     $(this).next().fadeIn();
   },function(){
@@ -109,7 +102,7 @@ document.querySelectorAll(".icons-btn").forEach((btn) => {
 });
 
 // design
-$(function () {
+$(document).ready(function(){
   const designInner = $(".design-inner");
   const nav = document.querySelectorAll(".nav");
   
@@ -129,7 +122,7 @@ $(function () {
 $(document).ready(function(){
 
   $(".thank").click(function(){
-    $(".modal").fadeIn();
+    $(".contact-modal").fadeIn();
   });
 
   $(".close-btn").click(function(){
