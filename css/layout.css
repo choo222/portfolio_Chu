@@ -24,6 +24,7 @@ section{
   width: 100%;
   height: 0.0625rem;
   background-color: rgba(17, 17, 17,0.3);
+  margin: 0 1rem;
 }
 .modal{
   position: fixed;
@@ -128,8 +129,8 @@ a.nav.active{
 .header{
   position: absolute;
   width: 100%;
-  /* padding: 0 6rem; */
-  padding: 1.5rem clamp(1rem, 3vw, 6rem) 0;
+  /* padding: 1.5rem clamp(1rem, 3vw, 6rem) 0; */
+  padding: 1.5rem clamp(1rem, 3vw, 6rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,12 +141,12 @@ a.nav.active{
 .header-tit{
   font-size: 3rem;
   font-weight: 200;
-  margin: 0 2rem;
+  margin: 0 1rem;
 }
 .header-btn{
   font-size: 1rem;
   font-weight: 400;
-  margin: 0 1rem;
+  /* margin: 0 1rem; */
   cursor: pointer;
   transition: 0.35s;
 }
@@ -233,6 +234,7 @@ a.nav.active{
   height: 100vh;
   position: relative;
   background: var(--primary-gra);
+  overflow: hidden;
 }
 
 /* middle */
@@ -243,13 +245,12 @@ a.nav.active{
   top: 0;
   transition: 0.35s;
 }
-.middle-sec.uxui{left: 0;}
-.middle-sec.graphic{right: 0;}
+.middle-uxui{left: 0;}
+.middle-graphic{right: 0;}
 .middle-dimmed{
   position: absolute;
   width: 100%;
   height: 100vh;
-  /* background-color: rgba(255,255,255,0); */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -290,29 +291,126 @@ a.nav.active{
   overflow: hidden;
 }
 .middle-images img{position: absolute;}
-.uxui .middle-images img:nth-of-type(1){
+.middle-uxui .middle-images img:nth-of-type(1){
   width: clamp(10rem, 30vw, 20rem);
   top: 70%;
   left: 75%;
   transform: translate(-50%,-50%);
 }
-.uxui .middle-images img:nth-of-type(2){
+.middle-uxui .middle-images img:nth-of-type(2){
   width: clamp(18rem, 60vw, 40rem);
   /* width: 75%; */
   top: 24%;
   left: 60%;
   transform: translate(-50%,-50%);
 }
-.uxui .middle-images img:nth-of-type(3){
+.middle-uxui .middle-images img:nth-of-type(3){
   width: clamp(15rem, 50vw, 35rem);
   /* width: 70%; */
   top: 60%;
   left: 27%;
   transform: translate(-50%,-50%);
 }
+.middle-graphic .middle-images img:nth-of-type(1){
+  width: clamp(7rem, 20vw, 13rem);
+  top: 26%;
+  left: 27%;
+  transform: translate(-50%,-50%) rotate(-10deg);
+}
+.middle-graphic .middle-images img:nth-of-type(2){
+  width: clamp(7rem, 23vw, 17rem);
+  top: 35%;
+  left: 77%;
+  transform: translate(-50%,-50%) rotate(-0deg);
+}
+.middle-graphic .middle-images img:nth-of-type(3){
+  width: clamp(7rem, 30vw, 37rem);
+  top: 74%;
+  left: 45%;
+  transform: translate(-50%,-50%) rotate(-0deg);
+}
 
 
+/* grahpic */
+.graphic-gallery{
+  width: clamp(50rem,70vw,87.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 3vw,3rem);
+}
+.gallery-top,
+.gallery-bottom{
+  display: flex;
+  gap: clamp(1.5rem, 3vw,3rem);
+}
+.gallery{
+  position: relative;
+  /* width: 100%;
+  height: 100%; */
+  flex: 1;
+  aspect-ratio: 3/2;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: var(--shadow-default);
+  transition: 0.35s;
+  cursor: pointer;
+}
+.gallery-inner{
+  color: var(--white);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.35s;
+}
+.gallery-inner>div{
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+.gallery-inner>div p:nth-child(1){font-size: 0.75rem;}
+.gallery-inner>div p:nth-child(2){font-size: 1.25rem;}
+.gallery-inner>button{
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  color: var(--white);
+  font-size: 0.875rem;
+  padding: 0 1rem 0.25rem 0.5rem;
+  border-bottom: 0.0625rem solid #fff;
+  /* cursor: pointer; */
+}
+.gallery-inner>button:after{
+  content: '';
+  position: absolute;
+  bottom: 0.4rem;
+  right: -0.2rem;
+  width: 1rem;
+  height: 0.0625rem;
+  background-color: #fff;
+  transform: rotate(60deg);
+}
+.gallery-inner>span{
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.875rem;
+}
+.gallery1{background-image: url(../images/graphic1-f.png);}
+.gallery1:hover{background-image: url(../images/graphic1-b.png);}
+.gallery2{background-image: url(../images/graphic2-f.png);}
+.gallery2:hover{background-image: url(../images/graphic2-b.png);}
+.gallery3{background-image: url(../images/graphic3-f.png);}
+.gallery3:hover{background-image: url(../images/graphic3-b.png);}
+.gallery4{background-image: url(../images/graphic4-f.png);}
+.gallery4:hover{background-image: url(../images/graphic4-b.png);}
+.gallery5{background-image: url(../images/graphic5-f.png);}
+.gallery5:hover{background-image: url(../images/graphic5-b.png);}
+.gallery6{background-image: url(../images/graphic6-f.png);}
+.gallery6:hover{background-image: url(../images/graphic6-b.png);}
 
+.gallery:hover .gallery-inner{opacity: 1;}
+.gallery:hover{transform: translateY(-0.25rem) scale(1.03);}
 
 
 
