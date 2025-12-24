@@ -32,14 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// intro
-// $(function () {
-//   $(".intro").on("click", function () {
-//     $(".intro.left").css("left", "-100%");
-//     $(".intro.right").css("right", "-100%");
-//     $("#home").css("transform","scale(1)")
-//   });
-// });
 
 // nav-bar
 const sections = document.querySelectorAll(".page-section");
@@ -118,20 +110,7 @@ $(document).ready(function(){
 });
 
 
-// Contact - thank-btn, modal close-btn
-$(document).ready(function(){
 
-  $(".thank").click(function(){
-    $(".contact-modal").fadeIn();
-  });
-
-  $(".close-btn").click(function(){
-    $(".modal").fadeOut();
-  });
-  $(".modal-bg").click(function(){
-    $(".modal").fadeOut();
-  });
-});
 
 
 

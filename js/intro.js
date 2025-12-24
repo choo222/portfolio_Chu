@@ -26,9 +26,9 @@ window.addEventListener("load", () => {
   
   setTimeout(() => {
     document.body.classList.remove("scroll-lock");
-  }, 6500);
+  }, 4000);
   
-  gsap.delayedCall(6.5, () => {
+  gsap.delayedCall(4, () => {
     homeTl.play();
   });
 });
@@ -40,14 +40,13 @@ const texts = [
   "WEB PUBLISHER",
   "Creativity",
   "Usability",
-  "Between Creativity and Usability."
 ];
 
 const tl = gsap.timeline();
 
 texts.forEach(text => {
   tl.to(".text", {
-    duration: 1.5,
+    duration: 1.2,
     scrambleText: {
       text,
       chars: "upperCase",

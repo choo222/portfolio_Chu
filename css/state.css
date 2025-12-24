@@ -19,6 +19,7 @@
   background-color: var(--white);
   cursor: pointer;
 }
+button.icon-btn{cursor: pointer;}
 .icons-btn-txt {
   inset: 0;
   display: flex;
