@@ -98,10 +98,10 @@ $(document).ready(function(){
   const designInner = $(".design-inner");
   const nav = document.querySelectorAll(".nav");
   
-  $(".uxui-btn").on("click", function () {
+  $(".uxui-btn, .gnb-uxui").on("click", function () {
     designInner.css("left", "0");
   });
-  $(".graphic-btn").on("click", function () {
+  $(".graphic-btn, .gnb-graphic").on("click", function () {
     designInner.css("left", "-200%");
   });
   $(nav).on("click", function () {
