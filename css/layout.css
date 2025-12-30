@@ -459,7 +459,7 @@ a.nav.active{
   font-size: 0.875rem;
   padding: 0 1rem 0.25rem 0.5rem;
   border-bottom: 0.0625rem solid #fff;
-  /* cursor: pointer; */
+  cursor: pointer;
 }
 .gallery-inner>button:after{
   content: '';

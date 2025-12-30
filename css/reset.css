@@ -21,9 +21,9 @@ time, mark, audio, video {
 html{
 	/* scroll-behavior: auto; */
   font-size: 16px;
-	overflow-x: hidden;
 	scroll-behavior: smooth;
 }
+body{overflow-x: hidden;}
 
 ol, ul {
 	list-style: none;
