@@ -176,6 +176,7 @@ a.nav.active{
   margin: 0 1rem;
 }
 .header-btn{
+  position: relative;
   font-size: 1rem;
   font-weight: 400;
   /* margin: 0 1rem; */
@@ -185,6 +186,27 @@ a.nav.active{
 .header-btn:hover{
   font-size: 1.5rem;
   color: var(--primary);
+}
+.header-btn:hover::before{
+  color: var(--primary);
+}
+.header-btn-left:before,
+.header-btn-right:before{
+  position: absolute;
+  font-family: fontawesome;
+  color: var(--dark-gray);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header-btn-left:before{
+  content: '\f100';
+  right: calc(100% + 1rem);
+  animation: Left 1s ease-in-out infinite alternate both;
+}
+.header-btn-right:before{
+  content: '\f101';
+  left: calc(100% + 1rem);
+  animation: Right 1s ease-in-out infinite alternate both;
 }
 
 /* Home_________________________________________ */
